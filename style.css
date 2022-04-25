@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+}
+
+.uni-padding {
+    padding: 0 100px;
+}
+
+h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+p {
+    font-size: 18px;
+    /* letter-spacing: 1px; */
+    /* text-overflow: inherit; */
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 50px;
+}
+h5,p{
+    text-transform: capitalize;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 12px 0;
+}
+
+nav {
+    display: flex !important;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    align-items: center;
+    height: 10vh;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 14px 12px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+ul {
+    display: flex;
+}
+
+.logo {
+    padding: 12px 12px;
+}
+
+.logo h2 {
+    font-size: 45px !important;
+    color: rgb(211, 159, 16);
+}
+
+nav ul li .active,
+nav ul li a:hover {
+    color: rgb(211, 159, 16);
+}
+
+nav .menu_btn i {
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* ********header *************** */
+.container {
+    height: 100vh;
+    max-width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h3 {
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.container h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+}
+
+.container a {
+    text-decoration: none;
+    padding: 15px 35px;
+    color: white;
+    background-color: rgb(211, 159, 16);
+    border-radius: 8px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.container a:hover {
+    background-color: rgb(228, 182, 55);
+}
+
+/* ******************service **************** */
+.service {
+    max-width: 100%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.row {
+    text-align: center;
+}
+
+.fa-solid {
+    font-size: 40px;
+    background-color: rgb(228, 182, 55);
+    color: white;
+    padding: 16px 16px;
+    border-radius: 50%;
+}
+
+.fa-cart-shopping {
+    padding: 18px 16px;
+}
+
+.fa-display {
+    padding: 18px 16px;
+}
+
+.fa-lock {
+    padding: 18px 20px;
+}
+
+
+/* ******************portfolio *************** */
+.portfoliocontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.portfolio{
+    max-width: 100%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-color: aliceblue;
+}
+.card{
+    width: 303px;
+    height: 305px;
+    margin-bottom: 28px;
+    margin-right: 69px;
+    margin-left: 35px;
+}
+.card-body{
+    text-align: center;
+}
+
+/* ***************team ******************** */
+.team{
+    max-width: 100%;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.team-container{
+    display: flex;
+}
+.team-container .card{
+    border: none;
+}
+.team-container .card img{
+    width: 217px;
+    height: 214px;
+    border-radius: 108px;
+    margin-left: 45px;
+}
+/* *************footer *************** */
+footer p{
+    text-align: center;
+}
+@media(max-width:900px) {
+    nav .menu_btn i {
+        display: block;
+        padding-right: 40px;
+    }
+
+    .logo {
+        padding-left: 40px;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: rgb(60, 7, 110);
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~.menu_btn i::before {
+        content: "\f00d";
+    }
+
+    #click:checked~ul {
+        left: 0%;
+    }
+}
